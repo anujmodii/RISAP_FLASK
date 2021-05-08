@@ -27,7 +27,7 @@ def hello():
 
 @app.route('/product_review/<asin>')
 @cross_origin()
-def product_review(asin):
+def product_review(asin="B000AST3AK"):
     # B001B35APA
     # B01G91Y4VE
     # B00570QQ5G
@@ -48,7 +48,6 @@ def product_review(asin):
     # pushing the json object to firebase realtime database
     key = db.push(analysis)
     analysis['key'] = str(key['name'])
-    print(analysis)
     # returning the json object
     return jsonify(analysis)
 
