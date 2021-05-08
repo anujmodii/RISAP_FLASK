@@ -21,7 +21,10 @@ db = firebase.database()
 app = Flask(__name__)
 
 # route which follows to run the desired functions
-# @app.route('/')
+@app.route('/')
+def hello():
+    return ("Hi")
+
 @app.route('/product_review/<asin>')
 @cross_origin()
 def product_review(asin):
