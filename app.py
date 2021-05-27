@@ -33,6 +33,7 @@ def product_review(asin="B000AST3AK"):
     # B00KJ07SEM
     # 'B000AST3AK', 'B004UB1O9Q', 'B0014CN8Y8', 'B00KJ07SEM', 'B0045LLC7K',
     # 'B001B35APA', 'B00INXG9MY', 'B00E37TQV0', 'B004INUWX0', 'B01H1R0K68'
+    print(asin)
     ts = str(time.time())
     product_rvw = product_review_analysis(asin, storage, user, ts)
     competition = competition_analysis(asin, storage, user, ts)
